@@ -7,7 +7,7 @@ const useFindUser = () => {
 
   const getUser = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/user`, { withCredentials: true });
+      const response = await axios.get(`https://version-control-system-be.onrender.com/user`, { withCredentials: true });
       if (response.data.success) {
         setUser(response.data.user);
         setLoading(false);

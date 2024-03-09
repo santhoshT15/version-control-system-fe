@@ -11,7 +11,7 @@ const ViewRepo = () => {
 
   const getOneRepo = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/repo/${params.repoId}`, { withCredentials: true });
+      const response = await axios.get(`https://version-control-system-be.onrender.com/repo/${params.repoId}`, { withCredentials: true });
       if (response) {
         setRepo({ ...response.data.repo });
         setIsLoading(false);
@@ -28,7 +28,7 @@ const ViewRepo = () => {
 
   const deleteRepo = async (repo) => {
     try {
-      const response = await axios.delete(`http://localhost:3001/repo/${repo._id}`, { withCredentials: true });
+      const response = await axios.delete(`https://version-control-system-be.onrender.com/repo/${repo._id}`, { withCredentials: true });
       if (response) {
         navigate(-1);
       }

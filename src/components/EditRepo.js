@@ -16,7 +16,7 @@ const EditRepo = () => {
     },
     onSubmit: async (values) => {
       try {
-        const response = await axios.put(`http://localhost:3001/repo/update/${params.repoId}`, values, { withCredentials: true });
+        const response = await axios.put(`https://version-control-system-be.onrender.com/repo/update/${params.repoId}`, values, { withCredentials: true });
         if (response) {
           alert(response.data.message);
           navigate(-1);
@@ -29,7 +29,7 @@ const EditRepo = () => {
 
   const getLatestCommit = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/repo/${params.repoId}`, { withCredentials: true });
+      const response = await axios.get(`https://version-control-system-be.onrender.com/repo/${params.repoId}`, { withCredentials: true });
       if (response) {
         const repoData = response.data.repo;
         setRepo({ ...repoData });

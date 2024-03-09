@@ -10,7 +10,7 @@ const ForgotPassword = () => {
     },
     onSubmit: async (values) => {
       try {
-        const response = await axios.post(`http://localhost:3001/forgotPassword`, values);
+        const response = await axios.post(`https://version-control-system-be.onrender.com/forgotPassword`, values);
         if (response) {
           setIsEmailSent(true);
         }

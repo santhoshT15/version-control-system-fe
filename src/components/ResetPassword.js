@@ -16,7 +16,7 @@ const ResetPassword = () => {
   const handleResetPassword = async (event) => {
     try {
       event.preventDefault();
-      const response = await axios.post(`http://localhost:3001/resetPassword`, userData);
+      const response = await axios.post(`https://version-control-system-be.onrender.com/resetPassword`, userData);
       if (response) {
         alert(response.data.message);
         navigate("/");

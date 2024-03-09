@@ -12,7 +12,7 @@ const CreateRepo = () => {
     },
     onSubmit: async (values) => {
       try {
-        const response = await axios.post(`http://localhost:3001/repo/add`, values, { withCredentials: true });
+        const response = await axios.post(`https://version-control-system-be.onrender.com/repo/add`, values, { withCredentials: true });
         if (response) {
           alert(response.data.message);
           navigate(-1);

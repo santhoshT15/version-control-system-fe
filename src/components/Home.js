@@ -9,7 +9,7 @@ const Home = () => {
 
   const getAllRepo = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/repo/view`, { withCredentials: true });
+      const response = await axios.get(`https://version-control-system-be.onrender.com/repo/view`, { withCredentials: true });
       if (response) {
         setRepos([...response.data.repos]);
         setIsLoading(false);
@@ -26,7 +26,7 @@ const Home = () => {
 
   const deleteRepo = async (repo) => {
     try {
-      const response = await axios.delete(`http://localhost:3001/repo/${repo._id}`, { withCredentials: true });
+      const response = await axios.delete(`https://version-control-system-be.onrender.com/repo/${repo._id}`, { withCredentials: true });
       if (response) {
         getAllRepo();
       }

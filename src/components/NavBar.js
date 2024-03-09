@@ -5,7 +5,7 @@ const NavBar = () => {
   const navigate = useNavigate();
   const handleLogout = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/signout`, { withCredentials: true });
+      const response = await axios.get(`https://version-control-system-be.onrender.com/signout`, { withCredentials: true });
       if (response) {
         document.cookie = "accessToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         navigate("/");

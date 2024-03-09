@@ -12,7 +12,7 @@ const Register = () => {
     },
     onSubmit: async (values) => {
       try {
-        const response = await axios.post(`http://localhost:3001/register`, values);
+        const response = await axios.post(`https://version-control-system-be.onrender.com/register`, values);
         console.log(values)
         if (response) {
           alert(response.data.message);

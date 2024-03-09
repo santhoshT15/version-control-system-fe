@@ -14,7 +14,7 @@ const Login = () => {
     },
     onSubmit: async (values) => {
       try {
-        const response = await axios.post(`http://localhost:3001/signin`, values, { withCredentials: true });
+        const response = await axios.post(`https://version-control-system-be.onrender.com/signin`, values, { withCredentials: true });
         if (response) {
           setUser(response.data.user);
           navigate("/home");
